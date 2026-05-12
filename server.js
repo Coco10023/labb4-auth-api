@@ -1,11 +1,13 @@
-// Importerar authRoutes
-const authRoutes = require("./routes/authRoutes");
-
 // Importerar paket
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
+
+
+// Importerar Routes
+const authRoutes = require("./routes/authRoutes");
+const protectedRoutes = require("./routes/productRoutes");
 
 // Skapar Express-applikationen
 const app = express();
@@ -14,7 +16,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Kopplar routes
 app.use("/api/auth", authRoutes);
+app.use("/api/protected", protectedRoutes);
 
 // Enkel test-route
 app.get("/", (req, res) => {
