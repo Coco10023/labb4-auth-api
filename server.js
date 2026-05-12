@@ -1,3 +1,6 @@
+// Importerar authRoutes
+const authRoutes = require("./routes/authRoutes");
+
 // Importerar paket
 const express = require("express");
 const mongoose = require("mongoose");
@@ -10,6 +13,8 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/auth", authRoutes);
 
 // Enkel test-route
 app.get("/", (req, res) => {
