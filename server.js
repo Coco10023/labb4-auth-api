@@ -7,7 +7,7 @@ require("dotenv").config();
 
 // Importerar Routes
 const authRoutes = require("./routes/authRoutes");
-const protectedRoutes = require("./routes/productRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 // Skapar Express-applikationen
 const app = express();
@@ -18,7 +18,7 @@ app.use(express.json());
 
 // Kopplar routes
 app.use("/api/auth", authRoutes);
-app.use("/api/protected", protectedRoutes);
+app.use("/api/products", productRoutes );
 
 // Enkel test-route
 app.get("/", (req, res) => {
