@@ -143,7 +143,7 @@ Om token saknas:
 ## Säkerhet
 
 Lösenord sparas inte i klartext.
-De hashats med bcrypt innan de lagras i databasen.
+De hashas med bcrypt innan de lagras i databasen.
 
 JWT används för att skydda routes.
 Klienten måste skicka token i Authorization-headern för att få åtkomst till skyddad data.
@@ -168,4 +168,4 @@ Starta produktion:
 npm start
 
 GitHub - repo: 
-https://github.com/Coco10023/labb4-auth-api 
+https://github.com/Coco10023/labb4-auth-api.git
